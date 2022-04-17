@@ -1,9 +1,16 @@
-class Producto:
+class Naturaleza:
+    #Constructor
+    def __init__(self):
+        self.ALIMENTARIA = 0.055
+        self.SERVICIO = 0.20
 
+
+class Producto:
+    #Constructor
     def __init__(self, tasa_iva):
         self.tasa_iva = tasa_iva
     
-    
+
 
 
 
