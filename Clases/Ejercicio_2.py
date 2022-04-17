@@ -20,15 +20,5 @@ class MVC:
         file.write("\n")
         file.write(self.__linea2)
         #Dentro de 10 segundos el archivo se cierra
-        time.sleep(10)
+        time.sleep(3)
         file.close()
-
-
-
-linea_1 = "Yo vivia con mi tio Sam"
-linea_2 = "Y un dia me mando a comprar el pan"
-
-#Declaramos la variable cosa_guapa como instancia de la clase MVC
-cosa_guapa = MVC(linea_1, linea_2)
-#Escribimos las dos lineas de texto separadas por un salto de linea
-cosa_guapa.escribir()
