@@ -1,4 +1,5 @@
 import string
+import time
 
 
 class MVC:
@@ -18,3 +19,6 @@ class MVC:
         file = open("Ejercicio2.txt")
         file.write(self.__linea1)
         file.write(self.__linea2)
+        #Dentro de 10 segundos el archivo se cierra
+        time.sleep(10)
+        file.close()
