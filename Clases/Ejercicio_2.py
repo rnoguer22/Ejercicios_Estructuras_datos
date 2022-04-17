@@ -24,6 +24,7 @@ class MVC:
         file.close()
 
 
+
 linea_1 = "Yo vivia con mi tio Sam"
 linea_2 = "Y un dia me mando a comprar el pan"
 
