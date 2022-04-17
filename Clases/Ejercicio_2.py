@@ -1,6 +1,4 @@
-import string
 import time
-
 
 class MVC:
     #Constructor
@@ -9,15 +7,17 @@ class MVC:
         self.__linea2 = linea2
         #Convertimos las dos lineas de texto a mayusculas
         #Ademas, nos aseguramos que ambas lineas de texto sean cadenas de texto
-        if isinstance(self.__linea1 and self.__linea2, string):
+        if isinstance(self.__linea1, str):
             self.__linea1.upper()
+        elif isinstance(self.__linea2, str):
             self.__linea2.upper()
         else:
-            raise ValueError("Las lineas deben de ser cadenas de texto")
+            raise TypeError("Las lineas deben de ser cadenas de texto")
         
     def escribir(self):
-        file = open("Ejercicio2.txt")
+        file = open("Ejercicio2.txt", "w")
         file.write(self.__linea1)
+        file.write("\n")
         file.write(self.__linea2)
         #Dentro de 10 segundos el archivo se cierra
         time.sleep(10)
@@ -29,4 +29,5 @@ linea_2 = "Y un dia me mando a comprar el pan"
 
 #Declaramos la variable cosa_guapa como instancia de la clase MVC
 cosa_guapa = MVC(linea_1, linea_2)
+#Escribimos las dos lineas de texto separadas por un salto de linea
 cosa_guapa.escribir()
