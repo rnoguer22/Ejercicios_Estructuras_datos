@@ -5,12 +5,21 @@ class Naturaleza:
         self.SERVICIO = 0.20
 
 
-class Producto:
+class Producto(Naturaleza):
     #Constructor
     def __init__(self, tasa_iva):
         self.tasa_iva = tasa_iva
     
+class FactoryFactura(Producto):
+    #Constructor
+    def __init__(self):
+        pass
 
+    def crear(self, factura):
+        resultado = 100 + self.tasa_iva*100
+    
+    def facturar(self):
+        print(self.crear(self.factura))
 
 
 
