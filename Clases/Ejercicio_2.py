@@ -1,4 +1,3 @@
-from multiprocessing.sharedctypes import Value
 import string
 
 
@@ -15,4 +14,7 @@ class MVC:
         else:
             raise ValueError("Las lineas deben de ser cadenas de texto")
         
-
+    def escribir(self):
+        file = open("Ejercicio2.txt")
+        file.write(self.__linea1)
+        file.write(self.__linea2)
